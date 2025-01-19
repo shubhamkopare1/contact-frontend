@@ -15,6 +15,7 @@ const ContactForm = () => {
   });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,12 +25,15 @@ const ContactForm = () => {
     e.preventDefault();
     setError("");
     setSuccess("");
+    setLoading(true);
 
     // Validate form
     if (!validateEmail(formData.email)) {
+      setLoading(false);
       return setError("Invalid email address");
     }
     if (formData.phone && !validatePhone(formData.phone)) {
+      setLoading(false);
       return setError("Invalid phone number");
     }
 
@@ -45,6 +49,8 @@ const ContactForm = () => {
       });
     } catch (err) {
       setError(err.message);
+    } finally{
+      setLoading(false);
     }
   };
 
@@ -102,7 +108,7 @@ const ContactForm = () => {
           required
         />
       </div>
-      <button type="submit">Submit Query</button>
+      <button type="submit" disabled={loading}>{loading ? "Submitting..." : "Submit Query"}</button>
     </form>
   );
 };

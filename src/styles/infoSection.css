@@ -111,6 +111,8 @@
   display: flex;
   margin-bottom: 5px;
   font-weight: bold;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .inputContainer input,
@@ -124,7 +126,7 @@
   color: white;
 }
 .inputContainer textarea{
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -139,8 +141,10 @@
 }
 
 .formSection button {
-  background-color: #5acba1;
-  color: #fff;
+    --tw-bg-opacity: 1;
+    background-color: rgb(108 193 182 / var(--tw-bg-opacity));
+  /* background-color: #5acba1; */
+  color: black;
   border: none;
   padding: 10px;
   border-radius: 5px;
@@ -161,11 +165,12 @@
   display: flex;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #fff;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .input {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
