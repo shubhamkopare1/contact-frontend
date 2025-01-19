@@ -1,37 +1,325 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-.infoContainer {
-    font-family: 'Open Sans', sans-serif;
-}
-.infoSection h1 {
 
-    font-size: 60px;
-    margin-bottom: 60px;
+.infoContainer {
+  font-family: 'Open Sans', sans-serif;
 }
+
+.infoSection h1 {
+  font-size: 2.5rem;
+}
+
 .infoSection p {
-    width: 720px;
-    font-size: 25px;
+  font-size: 18px;
+  color: #d1d5db80;
 }
 
 .chatWithUsLinks {
-    display:flex;
-    margin-top:50px;
-    
+  display: flex;
+  margin-top: 50px;
 }
+
+.icons {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2rem;
+}
+
 .icons img {
-    height: 100px;
-    width:100px;
-    margin-right: 50px;
-    
+  height: 100px;
+  width: 100px;
+  margin-right: 50px;
 }
+
 .formSection {
-    margin-top: 170px;
-    margin-left:50px ;
+  /* margin-top: 170px;
+  margin-left:50px ; */
 }
 
-@media screen and (max-width:768px) {
-    .formSection {
-        margin-left: 350px;
-        width: 100%;
-    }
+@media screen and (max-width: 768px) {
+  .infoContainer {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
 
+  .infoSection {
+    width: 100%;
+    text-align: center;
+  }
+
+  .chatWithUsLinks {
+    display: flex
+    ;
+        justify-content: center;
+        gap: 0;
+        flex-direction: row;
+  }
+
+  .icons img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .formSection {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .formSection button {
+    width: 100%;
+  }
+
+
+  .inputContainer select,
+  .inputContainer textarea {
+    width: 100% ;
+  }
+  .input{
+    width:100%;
+  }
+}
+
+/* ///////////////////////////contact //////// */
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding: 4rem;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.text{
+    font-size: 1rem !important;
+    margin: 0;
+}
+.formSection .error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.formSection .success {
+  color: green;
+  margin-bottom: 10px;
+}
+
+.inputContainer {
+  margin-bottom: 15px;
+}
+
+.inputContainer label {
+  display: flex;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.inputContainer input,
+.inputContainer select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+}
+.inputContainer textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    resize: none; 
+}
+
+.inputContainer textarea {
+  min-height: 100px;
+}
+
+.formSection button {
+  background-color: #5acba1;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* //////////////////////////input field  */
+
+/* InputField.css */
+.input-container {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: flex;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+}
+
+/* contact us    */
+
+/* ContactUs.css */
+
+.infoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 2rem; */
+  padding: 0 6rem;
+  color: white;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 50%;
+  padding-top: 3rem;
+}
+
+.colorRequired {
+  color: #f7f7f7;
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.chatWithUsLinks {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.icons img {
+  width: 6rem;
+  height: 6rem;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #6bc1b6;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #ffff;
+}
+
+.formSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formSections{
+    width: 100% !important;
+    /* padding: 3rem; */
+  }
+@media screen and (max-width: 768px) {
+  .infoContainer {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+  }
+  
+  .formSections{
+    width: 70% !important;
+    /* padding: 3rem; */
+  }
+  strong {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+  .infoSection {
+    width: 100%;
+    text-align: start;
+  }
+
+  .chatWithUsLinks {
+    display: flex
+    ;
+        justify-content: center;
+        flex-direction: row;
+        gap: 0;
+  }
+  .inputContainer textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    resize: none; 
+}
+
+  .icons img {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .formSection {
+    width: 100%;
+    /* padding: 3rem; */
+     padding: 0 !important; 
+     
+     display: flex
+     ;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+
+  }
+  .formSections{
+    width: 100% !important;
+    /* padding: 3rem; */
+    /* padding: 0 !important; */
+  }
+
+  .formSection button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .inputContainer input,
+  .inputContainer select {
+    width: 100%;
+  }
+  .inputContainer textarea{
+    width: 100%;
+  }
+
+  .infoSection h1 {
+    font-size: 1.5rem;
+  }
+
+  .infoSection p {
+    font-size: 14px;
+  }
 }

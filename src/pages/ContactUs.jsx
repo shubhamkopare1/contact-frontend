@@ -1,58 +1,47 @@
 import React from "react";
 import ContactForm from "../components/ContactForm";
-import "../styles/infoSection.css"
-import call from "../assets/call.jpg" 
-import message from "../assets/message.jpg"
+// import "../styles/ContactUs.css";  // Import the new CSS file
+import call from "../assets/call.jpg";
+import message from "../assets/message.jpg";
+import "../styles/infoSection.css";
+
 const ContactUs = () => {
   return (
-    <div style={styles.container} className="infoContainer">
-      <div style={styles.infoSection} className="infoSection">
+    <div className="infoContainer">
+      <div className="infoSection">
         <h1>Contact Us, We're Ready to Help!</h1>
         <p className="colorRequired">
-          We strive to provide you with the best experience and the best platform to find your choice. Post us any queries and we'll get back to you.
+          We strive to provide you with the best experience and the best platform to find your choice.
+        </p>
+        <p className="text">
+        Post us any queries and we'll get back to you.
         </p>
         <div className="chatWithUsLinks">
           <div className="icons">
-            <img src={call}/>
-            <img src={message} style={{marginTop:"0px"}}/>
+          <img src={message} alt="Message" />
+            <img src={call} alt="Call" />
+           
           </div>
           <div>
-            <p style={{marginTop:"0px"}}>
+            <p>
               <strong>Chat with us !!</strong> <br />
-              <a href="mailto:hello@toletglobe.in" style={{marginTop:"0px",textDecoration:"none",color:"#6bc1b6"}}>to_let@gmail.com</a>
+              <p className="text">Our friendly team is here to help</p>
+              <a href="mailto:hello@toletglobe.in">to_let@gmail.com</a>
             </p>
-            <p style={{marginTop:"50px"}}>
-              <strong >Call us ...</strong> <br />
-              <a href="mailto:hello@toletglobe.in" style={{marginTop:"0px",textDecoration:"none",color:"#6bc1b6"}}>+91 8707727347</a>
+            <p>
+              <strong>Call us ...</strong> <br />
+              <p className="text">Mon - Sat, 8 AM to 10 PM</p>
+              <a href="mailto:hello@toletglobe.in">+91 8707727347</a>
             </p>
           </div>
         </div>
       </div>
-      <div style={styles.formSection}>
+      <div className="formSection">
         <ContactForm />
       </div>
     </div>
   );
 };
 
-const styles = {
-  container: {
-    display: "flex",
-    flexWrap: "wrap",
-    padding: "20px",
-    color:"white",
-  },
-  infoSection: {
-    flex: "1",
-    marginRight: "20px",
-    marginTop:"150px",
-    marginLeft:"200px"
-  },
-  
-
-  formSection: {
-    flex: "1",
-  },
-};
-
 export default ContactUs;
+
