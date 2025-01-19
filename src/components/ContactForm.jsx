@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { sendContactForm } from "../services/api";
 import { validateEmail, validatePhone } from "../utils/validation";
 import InputField from "./InputField";
-
+import "../styles/infoSection.css"
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -48,7 +48,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={styles.form}>
+    <form onSubmit={handleSubmit} style={styles.form} className="formSection">
       {error && <p style={styles.error}>{error}</p>}
       {success && <p style={styles.success}>{success}</p>}
       <InputField
